@@ -23,7 +23,8 @@ module.exports = (app) => {
   app.get("/api/logout", (req, res) => {
     //logout function is provided by passport
     req.logout();
-    res.send(req.user);
+    // res.send(req.user);
+    res.redirect("/");
   });
 
   // this is needed so that the user who signed in has access to his info
