@@ -5,9 +5,8 @@ import { useFetchUserQuery, changeCurrentUser } from "../store";
 
 import Header from "./Header";
 import Landing from "./Landing";
-
-const Dashboard = <h2>Dashboard</h2>;
-const SurveyNew = <h2>SurveyNew</h2>;
+import Dashboard from "./Dashboard";
+import SurveyNew from "./Surveys/SurveyNew";
 
 function App() {
   const dispatch = useDispatch();
@@ -24,8 +23,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/surveys" element={Dashboard} />
-          <Route path="/surveys/new" element={SurveyNew} />
+          <Route path="/surveys" element={<Dashboard />} />
+          <Route path="/surveys/new" element={<SurveyNew />} />
         </Routes>
       </BrowserRouter>
     </div>

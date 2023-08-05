@@ -2,7 +2,7 @@ import StripeCheckout from "react-stripe-checkout";
 import { useHandleTokenMutation } from "../store";
 
 function Payments() {
-  const [handleToken, handleTokenResults] = useHandleTokenMutation();
+  const [handleToken] = useHandleTokenMutation();
 
   const tokenHandler = (token) => {
     handleToken(token);
